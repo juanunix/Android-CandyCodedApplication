@@ -22,20 +22,17 @@ public class InfoActivity extends AppCompatActivity {
         Picasso.with(this).
                 load(uri).
                 into(candyStoreImageView);
-
-
     }
 
+    // ***
+    // TODO - Task 2 - Launch the Google Maps Activity
+    // ***
     public void createMapIntent(View view) {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801"));
         if (mapIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(mapIntent);
         }
     }
-
-    // ***
-    // TODO - Task 2 - Launch the Google Maps Activity
-    // ***
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
